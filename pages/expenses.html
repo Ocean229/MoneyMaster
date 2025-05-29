@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker | MoneyMaster</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>MoneyMaster</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="budget.html">Budgeting Tips</a></li>
+          <li><a href="expenses.html" class="active">Expense Tracker</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="login-link">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="expenses-container">
+      <h2>Manage Your Expenses</h2>
+      <form class="expense-form" action="/expenses" method="POST">
+        <!-- 金额 -->
+        <input type="number" name="amount" placeholder="Amount (e.g. 29.99)" step="0.01" required>
+      
+        <!-- 类别 -->
+        <select name="category" required>
+          <option value="">Select Category</option>
+          <option value="Food">🍔 Food</option>
+          <option value="Transport">🚗 Transport</option>
+          <option value="Entertainment">🎮 Entertainment</option>
+          <option value="Shopping">🛍️ Shopping</option>
+          <option value="Bills">💡 Bills</option>
+          <option value="Health">🏥 Health</option>
+          <option value="Education">📚 Education</option>
+          <option value="Other">Other</option>
+        </select>
+      
+        <!-- 日期 -->
+        <input type="date" name="date" required>
+      
+        <!-- 备注 -->
+        <input type="text" name="note" placeholder="Note (optional)">
+      
+        <!-- 提交按钮 -->
+        <button type="submit">Add Expense</button>
+      </form>
+      
+
+      <table class="expense-table" id="expense-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount ($)</th>
+            <th>Date</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamically added rows go here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MoneyMaster | Smart Finance Solutions</p>
+    </div>
+  </footer>
+
+  <script src="../expenses.js"></script>
+</body>
+</html>
