@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | MoneyMaster</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>MoneyMaster</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="budget.html">Budgeting Tips</a></li>
+          <li><a href="expenses.html">Expense Tracker</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="login-link">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-wrapper">
+    <div class="login-page-container" id="container">
+      <div class="form-container sign-up-container">
+        <!-- Sign Up -->
+         <form action="#">
+          <h1>Sign Up</h1>
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="Password">
+          <input type="email" placeholder="Username">
+          <button id="send_code">Sent Verification Code</button>
+          <input type="email" placeholder="Verification Code">
+          <button>Sign Up</button>
+         </form>
+      </div>
+      <div class="form-container log-in-container">
+        <!-- Log In -->
+         <form action="#">
+          <h1>Log In</h1>
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="Password">
+          <a href="#">Forget Password</a>
+          <button>Log In</button>
+         </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Already have an account?</h1>
+            <p>Click here to log in!</p>
+            <button class="ghost" id="logIn">Log in</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Don't have an account?</h1>
+            <p>Click here to sign up and create one!</p>
+            <button class="ghost" id="signUp">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MoneyMaster | Smart Finance Solutions</p>
+    </div>
+  </footer>
+</body>
+<script src="../js/login.js"></script>
+</html>
